@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+ß
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card card-body text-center mt-5">
+                <h1 class="heading display-5 pb-3">Calculadora Salarial</h1>
+                <form id="salary-form" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Salario</span>
+                            </div>
+                            <input type="number" id="salary" placeholder="Ingresa salario total" class="form-control"
+                                name="salary">
+                        </div>
+                    </div>
+                    <div class="form-group calculateButtom">
+                        <input type="submit" name="" value="Calcular" class="btn btn-dark btn-block">
+                    </div>
+                </form>
+                <!-- Result  -->
+                <div id="results" class="pt-4">
+                    <h5>Resultados:</h5>
+                    <ul class="list-group ee-content-values">
+                        <div id="upSalary">
+                            <li class="col-xs-12 list-group-item text-start">
+                                <div class="health">
+                                    <div class="col-md-8 col-xs-7">
+                                        <span id="healthCol">Total ingreso promedio mensual</span>
+                                    </div>
+                                    <div class="col-md-4 col-xs-5 text-start">
+                                        <strong>
+                                            <span id="healthValueCol">$ {{ salary }}</span>
+                                        </strong>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                        <div id="upSalary">
+                            <li class="col-xs-12 list-group-item text-start">
+                                <div class="health">
+                                    <div class="col-md-8 col-xs-7">
+                                        <span id="healthCol">Salud Obligatoria</span>
+                                    </div>
+                                    <div class="col-md-4 col-xs-5 text-right">
+                                        <strong>
+                                            <span id="healthValueCol">$ {{ health }}</span>
+                                        </strong>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                        <div id="upSalary">
+                            <li class="col-xs-12 list-group-item text-start">
+                                <div class="health">
+                                    <div class="col-md-8 col-xs-7">
+                                        <span id="healthCol">Pensión Obligatoria</span>
+                                    </div>
+                                    <div class="col-md-4 col-xs-5 text-right">
+                                        <strong>
+                                            <span id="healthValueCol">$ {{ pension }}</span>
+                                        </strong>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                        <div id="upSalary">
+                            <li class="col-xs-12 list-group-item text-start">
+                                <div class="health">
+                                    <div class="col-md-8 col-xs-7">
+                                        <span id="healthCol">Fondo de solidaridad</span>
+                                    </div>
+                                    <div class="col-md-4 col-xs-5 text-right">
+                                        <strong>
+                                            <span id="healthValueCol">$ {{ solidarity_fund }}</span>
+                                        </strong>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                        <div id="upSalary">
+                            <li class="col-xs-12 list-group-item text-start">
+                                <div class="health">
+                                    <div class="col-md-8 col-xs-7">
+                                        <span id="healthCol">Auxiliar de transporte</span>
+                                    </div>
+                                    <div class="col-md-4 col-xs-5 text-right">
+                                        <strong>
+                                            <span id="healthValueCol">$ {{ transport_assistant }}</span>
+                                        </strong>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                        <div id="upSalary">
+                            <li class="col-xs-12 list-group-item text-start">
+                                <div class="health">
+                                    <div class="col-md-8 col-xs-7">
+                                        <span id="healthCol">Pago neto</span>
+                                    </div>
+                                    <div class="col-md-4 col-xs-5 text-right">
+                                        <strong>
+                                            <span id="healthValueCol">$ {{ net_payment }}</span>
+                                        </strong>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                        <div class="form-group calculateButtom text-end">
+                            <a href="{% url 'home' %}" type="button" name="" class="btn btn-success btn-block">Limpiar</a
+                                </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
