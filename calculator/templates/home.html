@@ -35,7 +35,7 @@
                                     </div>
                                     <div class="col-md-4 col-xs-5 text-start">
                                         <strong>
-                                            <span id="healthValueCol">$ {{ salary }}</span>
+                                            <span id="healthValueCol">$ {{ salary | default:0 }}</span>
                                         </strong>
                                     </div>
                                 </div>
@@ -49,7 +49,7 @@
                                     </div>
                                     <div class="col-md-4 col-xs-5 text-right">
                                         <strong>
-                                            <span id="healthValueCol">$ {{ health }}</span>
+                                            <span id="healthValueCol">$ {{ health | default:0 }}</span>
                                         </strong>
                                     </div>
                                 </div>
@@ -63,7 +63,7 @@
                                     </div>
                                     <div class="col-md-4 col-xs-5 text-right">
                                         <strong>
-                                            <span id="healthValueCol">$ {{ pension }}</span>
+                                            <span id="healthValueCol">$ {{ pension | default:0 }}</span>
                                         </strong>
                                     </div>
                                 </div>
@@ -77,7 +77,7 @@
                                     </div>
                                     <div class="col-md-4 col-xs-5 text-right">
                                         <strong>
-                                            <span id="healthValueCol">$ {{ solidarity_fund }}</span>
+                                            <span id="healthValueCol">$ {{ solidarity_fund | default:0 }}</span>
                                         </strong>
                                     </div>
                                 </div>
@@ -91,7 +91,7 @@
                                     </div>
                                     <div class="col-md-4 col-xs-5 text-right">
                                         <strong>
-                                            <span id="healthValueCol">$ {{ transport_assistant }}</span>
+                                            <span id="healthValueCol">$ {{ transport_assistant | default:0 }}</span>
                                         </strong>
                                     </div>
                                 </div>
@@ -105,7 +105,7 @@
                                     </div>
                                     <div class="col-md-4 col-xs-5 text-right">
                                         <strong>
-                                            <span id="healthValueCol">$ {{ net_payment }}</span>
+                                            <span id="healthValueCol">$ {{ net_payment | default:0 }}</span>
                                         </strong>
                                     </div>
                                 </div>

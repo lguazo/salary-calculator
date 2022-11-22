@@ -14,11 +14,4 @@ def HomeView(request):
     else:
         form = CalculatorForm()
         
-    return render(request, 'home.html', {
-        "salary": 0,
-        "net_payment": 0,
-        "pension": 0,
-        "health": 0,
-        "transport_assistant": 0,
-        "solidarity_fund": 0
-    })
+    return render(request, 'home.html', None)
